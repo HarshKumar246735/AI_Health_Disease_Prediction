@@ -1,5 +1,10 @@
 # HealthPredict
 
+<img width="1891" height="916" alt="image" src="https://github.com/user-attachments/assets/d2c16b10-64e0-4ab0-a8cb-7e1614b65d66" />
+
+Live Demo -https://ai-health-disease-prediction.vercel.app/
+
+
 > **Understand Your Health Risks. Make Informed Decisions.**
 
 A full-stack web application that gives **educational health-risk estimates** for 10 conditions. It is built to showcase full-stack engineering: a React front end, a Node/Express API with JWT auth and role-based access, MongoDB persistence, PDF reports, user and admin dashboards, and a small Python service that runs simple classical ML models.
@@ -7,11 +12,20 @@ A full-stack web application that gives **educational health-risk estimates** fo
 > **Medical disclaimer.** This platform provides educational risk estimates based on the information entered by the user. It is not a medical diagnosis and should not replace professional medical advice.
 
 ## Features
+<img width="1917" height="912" alt="image" src="https://github.com/user-attachments/assets/d8033b4d-f05c-4836-af4a-ff17c87523e9" />
 
 - Landing page, register/login, protected routes, profile and password change
 - JWT authentication, bcrypt password hashing, `USER` / `ADMIN` roles
+<img width="1916" height="925" alt="image" src="https://github.com/user-attachments/assets/2823c007-1b3d-4ae7-80c9-36492ed7a1ec" />
+
 - 10 conditions, each with a form generated from that model's own feature schema
+
+ <img width="1910" height="916" alt="image" src="https://github.com/user-attachments/assets/8faf49ab-6d93-4efe-95a5-748127b38aab" />
+ 
 - Result page with risk gauge, plain-language influence factors and general health information
+
+<img width="1907" height="931" alt="image" src="https://github.com/user-attachments/assets/0c5fa62f-ad95-40d3-835a-755403699af4" />
+
 - Saved history with search, filters, sorting, pagination and delete
 - PDF report per assessment
 - User dashboard (Recharts) and admin area: users, assessments, model info, analytics, system status
@@ -22,11 +36,11 @@ A full-stack web application that gives **educational health-risk estimates** fo
 
 | Layer | Tech |
 |---|---|
-| Client | React 18, Vite, React Router, Axios, Recharts, plain CSS (no UI framework) |
-| API | Node.js, Express, Mongoose, JWT, bcryptjs, Helmet, CORS, express-rate-limit, PDFKit |
+| Client | React 18, Vite, React Router, Axios, plain CSS  |
+| API | Node.js, Express, Mongoose, JWT, bcryptjs, Helmet, CORS, express-rate-limit |
 | ML service | Python, FastAPI, pandas, numpy, scikit-learn (Logistic Regression), joblib |
-| Database | MongoDB (Atlas in production) |
-| Hosting | Vercel (client), Render (API and ML service), MongoDB Atlas |
+| Database | MongoDB  |
+| Hosting | Vercel (client), Render , MongoDB Atlas |
 
 ## Architecture
 
@@ -123,8 +137,12 @@ Step-by-step instructions for MongoDB Atlas, the two Render services and Vercel 
 Each model is a scikit-learn pipeline (median imputation, standard scaling, Logistic Regression). Training scripts compute accuracy, precision, recall, F1 and ROC AUC on a held-out 20% split and store them with the model; the admin "Diseases" page shows them. **These numbers describe performance on a public research dataset, not real-world clinical accuracy.**
 
 ## Screenshots
+<img width="1915" height="922" alt="image" src="https://github.com/user-attachments/assets/ed9dc1fa-6e86-40a9-a607-c9d7dc0908d1" />
 
-Add screenshots here after running the app (landing page, dashboard, result page, admin).
+<img width="1917" height="917" alt="image" src="https://github.com/user-attachments/assets/b7f8262c-4993-40c3-abf3-b2d6aed95774" />
+<img width="1913" height="908" alt="image" src="https://github.com/user-attachments/assets/9d355b2a-b1ab-4852-8a55-e90d9d3e16a2" />
+
+
 
 ## Future improvements
 
