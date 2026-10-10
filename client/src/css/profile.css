@@ -1,0 +1,6 @@
+.profile-summary { grid-template-columns: auto 1fr auto; align-items: center; gap: var(--space-5); }
+.profile-summary h2 { font-size: 1.4rem; }
+.profile-summary dl { display: flex; gap: var(--space-6); margin: 0; }
+.profile-summary dt { font-size: 0.78rem; color: var(--text-muted); }
+.profile-summary dd { margin: 0; font-weight: 700; }
+.profile-logout { grid-template-columns: 1fr auto; align-items: center; }

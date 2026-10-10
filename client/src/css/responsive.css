@@ -1,0 +1,105 @@
+/* Breakpoints: 1200 / 1024 / 768 / 480 / 360 */
+@media (max-width: 1200px) {
+  .hero__grid { gap: var(--space-7); }
+}
+
+@media (max-width: 1024px) {
+  .container { padding: 0 var(--space-5); }
+  .hero { padding: var(--space-7) 0 var(--space-8); }
+  .hero__grid { grid-template-columns: 1fr; }
+  .hero h1 { max-width: 22ch; }
+  .hero-visual { max-width: 520px; }
+  .features, .disease-grid { grid-template-columns: repeat(2, 1fr); }
+  .steps { grid-template-columns: repeat(2, 1fr); }
+  .about { grid-template-columns: 1fr; gap: var(--space-6); }
+  .section { padding: var(--space-8) 0; }
+  .auth { grid-template-columns: minmax(300px, 0.7fr) 1fr; }
+  .auth__panel { padding: var(--space-6); }
+}
+
+@media (max-width: 768px) {
+  .navbar__burger { display: grid; }
+  .navbar__actions--desktop { display: none; }
+  .navbar__links { position: absolute; top: var(--nav-h); left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; margin: 0; padding: var(--space-3) var(--space-5) var(--space-5); background: var(--surface); border-bottom: 1px solid var(--border); box-shadow: var(--shadow-md); display: none; }
+  .navbar__links.is-open { display: flex; }
+  .navbar__links > a { padding: 14px 0; border-bottom: 1px solid var(--border); font-size: 1rem; }
+  .navbar__actions--mobile { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); margin-top: var(--space-4); }
+  .stats__grid { grid-template-columns: repeat(2, 1fr); }
+  .stats__item:nth-child(3) { border-left: 0; padding-left: 0; }
+  .stats__item:nth-child(n + 3) { border-top: 1px solid rgba(255, 255, 255, 0.12); }
+  .footer__inner { flex-direction: column; gap: var(--space-6); }
+  .footer__bottom { flex-direction: column; gap: var(--space-2); }
+  .auth { grid-template-columns: 1fr; }
+  .auth__panel { display: none; }
+  .auth__mobile-logo { display: block; }
+  .auth__main { align-items: start; padding-top: var(--space-6); }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 var(--space-4); }
+  .hero { padding-top: var(--space-6); }
+  .hero__cta .btn { flex: 1 1 100%; }
+  .hero-visual { padding-left: 0; padding-bottom: var(--space-6); }
+  .hero-visual__note { left: var(--space-3); }
+  .hero-visual__factors li { grid-template-columns: 100px 1fr; }
+  .features, .disease-grid, .steps { grid-template-columns: 1fr; }
+  .section { padding: var(--space-7) 0; }
+  .section__head { margin-bottom: var(--space-6); }
+  .footer__cols { grid-template-columns: repeat(2, auto); gap: var(--space-6); }
+  .toast-viewport { right: var(--space-4); bottom: var(--space-4); }
+}
+
+@media (max-width: 360px) {
+  .stats__item strong { font-size: 1.5rem; }
+  .auth-form__row { flex-direction: column; align-items: flex-start; }
+  .navbar__actions--mobile { grid-template-columns: 1fr; }
+  .footer__cols { grid-template-columns: 1fr; }
+}
+
+/* ---- App area (dashboard, assessments, admin) ---- */
+@media (max-width: 1200px) {
+  .stat-grid--5 { grid-template-columns: repeat(3, 1fr); }
+  .app-content { padding: var(--space-6) var(--space-5) var(--space-7); }
+}
+@media (max-width: 1024px) {
+  .app-shell { grid-template-columns: 1fr; }
+  .app-topbar { display: flex; }
+  .sidebar { position: fixed; z-index: 80; inset: 0 auto 0 0; width: 280px; transform: translateX(-100%); transition: transform 0.22s ease; }
+  .sidebar.is-open { transform: none; box-shadow: var(--shadow-lg); }
+  .sidebar-scrim { display: block; position: fixed; inset: 0; z-index: 70; background: rgba(10, 34, 64, 0.45); }
+  .stat-grid { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: 1fr; }
+  .grid-3 .span-2 { grid-column: auto; }
+  .disease-grid--app { grid-template-columns: repeat(2, 1fr); }
+  .filters { grid-template-columns: 1fr 1fr; }
+  .result-hero { grid-template-columns: 1fr; justify-items: center; gap: var(--space-5); }
+  .result-hero__copy { justify-items: start; width: 100%; }
+}
+@media (max-width: 768px) {
+  .app-content { padding: var(--space-5) var(--space-4) var(--space-7); }
+  .grid-2, .result-grid, .form-grid { grid-template-columns: 1fr; }
+  .stat-grid--5 { grid-template-columns: repeat(2, 1fr); }
+  .table-only { display: none; }
+  .cards-only { display: grid; }
+  .form-foot { flex-direction: column; align-items: stretch; }
+  .form-foot .btn { width: 100%; }
+  .profile-summary { grid-template-columns: auto 1fr; }
+  .profile-summary dl { grid-column: 1 / -1; flex-wrap: wrap; gap: var(--space-5); }
+  .profile-logout { grid-template-columns: 1fr; }
+  .filters--2, .filters--3 { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .stat-grid, .stat-grid--5 { grid-template-columns: 1fr; }
+  .disease-grid--app { grid-template-columns: 1fr; }
+  .filters { grid-template-columns: 1fr; }
+  .result-hero { padding: var(--space-5) var(--space-4); }
+  .result-hero__actions .btn { flex: 1 1 100%; }
+  .switch-field { flex-direction: column; align-items: flex-start; }
+  .modal__row { grid-template-columns: 1fr; }
+  .modal__row .btn { margin-top: 0; }
+  .page-header .btn { width: 100%; }
+}
+@media (max-width: 360px) {
+  .card { padding: var(--space-4); }
+  .stat-card { padding: var(--space-4); }
+}

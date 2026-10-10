@@ -1,0 +1,23 @@
+.result-hero { grid-template-columns: 300px 1fr; gap: var(--space-7); align-items: center; padding: var(--space-6); }
+.result-hero__gauge { display: grid; gap: var(--space-3); justify-items: center; }
+.result-hero__copy { display: grid; gap: var(--space-4); }
+.result-hero__copy h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); }
+.result-hero__copy p { color: var(--text-muted); max-width: 62ch; }
+.result-hero__notice { display: flex; align-items: center; gap: 8px; font-size: 0.88rem; font-weight: 600; color: var(--navy-800) !important; }
+.result-hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+.result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); }
+.saved-chip { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; background: var(--green-100); color: var(--green-600); border-radius: 99px; font-weight: 700; font-size: 0.85rem; }
+.factors { display: grid; gap: var(--space-2); }
+.factors li { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); padding: 10px var(--space-3); background: var(--bg); border-radius: var(--radius-sm); font-size: 0.92rem; font-weight: 600; }
+.factor { font-size: 0.78rem; padding: 3px 10px; border-radius: 99px; white-space: nowrap; }
+.factor--increases { background: var(--amber-100); color: var(--amber-600); }
+.factor--decreases { background: var(--green-100); color: var(--green-600); }
+.input-list { display: grid; margin: 0; }
+.input-list div { display: flex; justify-content: space-between; gap: var(--space-4); padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 0.92rem; }
+.input-list div:last-child { border-bottom: 0; }
+.input-list dt { color: var(--text-muted); }
+.input-list dd { margin: 0; font-weight: 700; text-align: right; }
+.bullets { display: grid; gap: var(--space-2); padding-left: 1.1rem; list-style: disc; color: var(--text); }
+.bullets li::marker { color: var(--green-600); }
+.detail-foot { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap; }
+.gauge { width: 100%; max-width: 260px; }

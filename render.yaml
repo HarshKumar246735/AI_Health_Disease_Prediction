@@ -1,0 +1,34 @@
+# Optional Render Blueprint. You can also create both services by hand (see documentation/DEPLOYMENT.md).
+services:
+  - type: web
+    name: healthpredict-ml
+    runtime: python
+    rootDir: ml-service
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: ML_API_KEY
+        generateValue: true
+
+  - type: web
+    name: healthpredict-api
+    runtime: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CLIENT_URL
+        sync: false
+      - key: ML_SERVICE_URL
+        sync: false
+      - key: ML_API_KEY
+        sync: false

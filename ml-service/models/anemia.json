@@ -1,0 +1,17 @@
+{
+  "modelType": "Logistic Regression",
+  "dataset": "Anemia dataset (complete blood count, Kaggle)",
+  "featureCount": 5,
+  "trainingRows": 1136,
+  "testRows": 285,
+  "positiveShare": 0.436,
+  "trainedAt": "2026-10-09T11:39:54+00:00",
+  "metrics": {
+    "accuracy": 0.986,
+    "precision": 0.969,
+    "recall": 1.0,
+    "f1": 0.984,
+    "rocAuc": 1.0
+  },
+  "metricsNote": "Measured on a held-out 20% test split of the public dataset. Not a measure of real-world clinical accuracy."
+}

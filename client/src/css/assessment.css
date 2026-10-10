@@ -1,0 +1,24 @@
+.form-card { gap: var(--space-5); }
+.form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-5) var(--space-5); }
+.form-progress { display: flex; align-items: center; gap: var(--space-4); font-size: 0.85rem; color: var(--text-muted); font-weight: 600; }
+.form-progress__bar { flex: 1; height: 6px; background: var(--border); border-radius: 99px; overflow: hidden; }
+.form-progress__bar i { display: block; height: 100%; background: var(--green-500); border-radius: 99px; transition: width 0.25s ease; }
+.form-foot { display: flex; align-items: center; justify-content: space-between; gap: var(--space-5); padding-top: var(--space-4); border-top: 1px solid var(--border); }
+.form-foot p { font-size: 0.82rem; color: var(--text-muted); max-width: 62ch; }
+.form-stack { display: grid; gap: var(--space-4); }
+
+.field__suffix { position: absolute; right: 14px; font-size: 0.82rem; color: var(--text-muted); font-weight: 600; pointer-events: none; }
+.field__control input[type='number'] { padding-right: 76px; -moz-appearance: textfield; }
+.field__control input[type='number']::-webkit-outer-spin-button,
+.field__control input[type='number']::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.field__control--select select { width: 100%; min-height: 46px; padding: 0 40px 0 var(--space-4); background: var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2355657a' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 14px center; border: 1px solid var(--border); border-radius: var(--radius-md); appearance: none; -webkit-appearance: none; transition: border-color 0.15s, box-shadow 0.15s; }
+.field__control--select select:focus { outline: none; border-color: var(--focus); box-shadow: 0 0 0 4px rgba(31, 95, 168, 0.15); }
+.field--error .field__control--select select { border-color: var(--red-600); }
+.field__control--select select:disabled { background-color: var(--bg); color: var(--text-muted); cursor: not-allowed; }
+
+.switch-field { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); padding: var(--space-3) var(--space-4); border: 1px solid var(--border); border-radius: var(--radius-md); background: #fbfcfe; }
+.switch { display: inline-flex; align-items: center; gap: 10px; flex: none; padding: 4px 12px 4px 4px; border: 1px solid var(--border); border-radius: 99px; background: var(--surface); font-weight: 700; font-size: 0.85rem; color: var(--text-muted); transition: background-color 0.2s, border-color 0.2s; }
+.switch__thumb { width: 22px; height: 22px; border-radius: 50%; background: #c4cfdc; transition: transform 0.2s, background-color 0.2s; }
+.switch.is-on { border-color: var(--green-500); background: var(--green-100); color: var(--green-600); }
+.switch.is-on .switch__thumb { background: var(--green-500); }
+.switch__text { min-width: 24px; }

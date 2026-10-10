@@ -1,0 +1,17 @@
+{
+  "modelType": "Logistic Regression",
+  "dataset": "Hypertension risk dataset (Framingham-derived, Kaggle)",
+  "featureCount": 9,
+  "trainingRows": 480,
+  "testRows": 120,
+  "positiveShare": 0.397,
+  "trainedAt": "2026-10-09T11:39:54+00:00",
+  "metrics": {
+    "accuracy": 0.808,
+    "precision": 0.736,
+    "recall": 0.812,
+    "f1": 0.772,
+    "rocAuc": 0.867
+  },
+  "metricsNote": "Measured on a held-out 20% test split of the public dataset. Not a measure of real-world clinical accuracy."
+}

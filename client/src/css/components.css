@@ -1,0 +1,86 @@
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2);
+  min-height: 42px; padding: 0 var(--space-5);
+  border: 1px solid transparent; border-radius: var(--radius-md);
+  font-weight: 700; font-size: 0.95rem; line-height: 1; white-space: nowrap;
+  transition: background-color 0.18s, border-color 0.18s, box-shadow 0.18s, transform 0.12s;
+}
+.btn:hover { text-decoration: none; }
+.btn:active { transform: translateY(1px); }
+.btn--lg { min-height: 50px; padding: 0 var(--space-6); font-size: 1rem; }
+.btn--block { width: 100%; }
+.btn--primary { background: var(--navy-800); color: #fff; box-shadow: var(--shadow-sm); }
+.btn--primary:hover { background: var(--navy-700); }
+.btn--secondary { background: var(--surface); color: var(--navy-800); border-color: var(--border); }
+.btn--secondary:hover { border-color: var(--navy-800); }
+.btn--ghost { background: transparent; color: var(--blue-600); padding: 0 var(--space-3); }
+.btn--ghost:hover { background: var(--blue-100); }
+.btn--danger { background: var(--red-600); color: #fff; }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.btn__spinner { width: 16px; height: 16px; border: 2px solid rgba(255, 255, 255, 0.4); border-top-color: #fff; border-radius: 50%; animation: spin 0.7s linear infinite; }
+.btn--secondary .btn__spinner, .btn--ghost .btn__spinner { border-color: var(--border); border-top-color: var(--navy-800); }
+
+/* Form fields */
+.field { display: grid; gap: 6px; }
+.field__label { font-weight: 600; font-size: 0.9rem; color: var(--text); }
+.field__control { position: relative; display: flex; align-items: center; }
+.field__control input {
+  width: 100%; min-height: 46px; padding: 0 var(--space-4);
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.field__control input.has-icon { padding-left: 44px; }
+.field__control input::placeholder { color: #8a97a8; }
+.field__control input:hover { border-color: #c4cfdc; }
+.field__control input:focus { outline: none; border-color: var(--focus); box-shadow: 0 0 0 4px rgba(31, 95, 168, 0.15); }
+.field__icon { position: absolute; left: 14px; color: #7a889b; pointer-events: none; }
+.field__toggle { position: absolute; right: 6px; display: grid; place-items: center; width: 36px; height: 36px; border: 0; background: transparent; color: var(--text-muted); border-radius: var(--radius-sm); }
+.field__toggle:hover { color: var(--navy-800); background: var(--bg); }
+.field--error .field__control input { border-color: var(--red-600); }
+.field--error .field__control input:focus { box-shadow: 0 0 0 4px rgba(201, 61, 61, 0.15); }
+.field__error { display: flex; align-items: center; gap: 6px; font-size: 0.85rem; color: var(--red-600); font-weight: 600; }
+.field__hint { font-size: 0.85rem; color: var(--text-muted); }
+
+.check { display: inline-flex; align-items: center; gap: 10px; font-size: 0.92rem; cursor: pointer; }
+.check input { width: 18px; height: 18px; accent-color: var(--navy-800); }
+.link-btn { background: none; border: 0; padding: 0; color: var(--blue-600); font-weight: 600; font-size: 0.92rem; }
+.link-btn:hover { text-decoration: underline; }
+.form-alert { display: flex; gap: 10px; align-items: flex-start; padding: var(--space-3) var(--space-4); background: var(--red-100); color: #8f2626; border-radius: var(--radius-md); font-size: 0.92rem; font-weight: 600; }
+.form-alert svg { flex: none; margin-top: 2px; }
+.form-note { font-size: 0.85rem; color: var(--text-muted); }
+
+/* Risk badge */
+.risk-badge { display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 999px; font-size: 0.8rem; font-weight: 700; }
+.risk-badge--low { background: var(--green-100); color: var(--green-600); }
+.risk-badge--moderate { background: var(--amber-100); color: var(--amber-600); }
+.risk-badge--high { background: var(--red-100); color: var(--red-600); }
+
+/* Toasts */
+.toast-viewport { position: fixed; right: var(--space-5); bottom: var(--space-5); z-index: 100; display: grid; gap: var(--space-3); width: min(380px, calc(100vw - 32px)); }
+.toast { display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-3) var(--space-4); background: var(--surface); border: 1px solid var(--border); border-left-width: 4px; border-radius: var(--radius-md); box-shadow: var(--shadow-md); animation: toast-in 0.22s ease-out; }
+.toast p { flex: 1; font-size: 0.92rem; font-weight: 600; }
+.toast button { display: grid; place-items: center; border: 0; background: none; color: var(--text-muted); padding: 2px; border-radius: 4px; }
+.toast--success { border-left-color: var(--green-500); }
+.toast--success > svg { color: var(--green-600); }
+.toast--error { border-left-color: var(--red-600); }
+.toast--error > svg { color: var(--red-600); }
+.toast--info { border-left-color: var(--blue-600); }
+.toast--info > svg { color: var(--blue-600); }
+
+/* Loading */
+.spinner { display: inline-block; border: 3px solid var(--border); border-top-color: var(--navy-800); border-radius: 50%; animation: spin 0.8s linear infinite; }
+.page-loader { min-height: 100vh; display: grid; place-items: center; }
+.skeleton { display: block; background: linear-gradient(90deg, #e9eef4 25%, #f4f7fa 50%, #e9eef4 75%); background-size: 200% 100%; animation: shimmer 1.4s ease-in-out infinite; }
+
+/* Disease card */
+.disease-card { display: flex; flex-direction: column; gap: var(--space-3); padding: var(--space-5); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); transition: border-color 0.18s, box-shadow 0.18s; }
+.disease-card:hover { border-color: #c4d3e6; box-shadow: var(--shadow-md); }
+.disease-card__icon { display: grid; place-items: center; width: 46px; height: 46px; border-radius: var(--radius-md); background: var(--blue-100); color: var(--navy-700); }
+.disease-card p { color: var(--text-muted); font-size: 0.93rem; flex: 1; }
+.disease-card__footer { display: flex; align-items: center; justify-content: space-between; margin: var(--space-2) calc(var(--space-3) * -1) calc(var(--space-2) * -1) 0; }
+.disease-card__meta { font-size: 0.85rem; color: var(--text-muted); font-weight: 600; }
+
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes shimmer { to { background-position: -200% 0; } }
+@keyframes toast-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
